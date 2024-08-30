@@ -1,0 +1,109 @@
+
+achyu@Achyuta MINGW64 ~
+$ cd d:
+
+achyu@Achyuta MINGW64 /d
+$ cd HSBC
+
+achyu@Achyuta MINGW64 /d/HSBC
+$ mkdir gitfundfolder
+
+achyu@Achyuta MINGW64 /d/HSBC
+$ cd g
+gitfundfolder/                      grads-assignment-day3-achyuta0001/
+grads-assignment-day1-achyuta0001/  grads-assignment-day4-achyuta0001/
+grads-assignment-day10-achyuta0001/ grads-assignment-day5-achyuta0001/
+grads-assignment-day12-achyuta0001/ grads-assignment-day6-achyuta0001/
+grads-assignment-day13-achyuta0001/ grads-assignment-day7-achyuta0001/
+grads-assignment-day14-achyuta0001/ grads-assignment-day8-achyuta0001/
+grads-assignment-day2-achyuta0001/  grads-assignment-day9-achyuta0001/
+
+achyu@Achyuta MINGW64 /d/HSBC
+$ cd gitfundfolder/
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder
+$ git init
+Initialized empty Git repository in D:/HSBC/gitfundfolder/.git/
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (master)
+$ git remote add origin https://github.com/achyuta0001/gitfund.git
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (master)
+$ git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 899 bytes | 3.00 KiB/s, done.
+From https://github.com/achyuta0001/gitfund
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (master)
+$ git checkout -b newbranch
+Switched to a new branch 'newbranch'
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (newbranch)
+$ git status
+On branch newbranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bucketfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (newbranch)
+$ git add .
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (newbranch)
+$ git commit -m "pushing to new branch"
+[newbranch cdd4d42] pushing to new branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (newbranch)
+$ git push origin newbranch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'newbranch' on GitHub by visiting:
+remote:      https://github.com/achyuta0001/gitfund/pull/new/newbranch
+remote:
+To https://github.com/achyuta0001/gitfund.git
+ * [new branch]      newbranch -> newbranch
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (newbranch)
+$ git checkout main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (main)
+$ git merge newbranch
+Updating 0d1ab71..cdd4d42
+Fast-forward
+ bucketfile.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/achyuta0001/gitfund.git
+   0d1ab71..cdd4d42  main -> main
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (main)
+$ git branch -d newbranch
+Deleted branch newbranch (was cdd4d42).
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (main)
+$ git push origin -d newbranch\
+>
+
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (main)
+$ git push origin -d newbranch
+To https://github.com/achyuta0001/gitfund.git
+ - [deleted]         newbranch
+
+achyu@Achyuta MINGW64 /d/HSBC/gitfundfolder (main)
+$
